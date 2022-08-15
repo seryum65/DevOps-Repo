@@ -7,7 +7,7 @@ services:
             MYSQL_ROOT_PASSWORD: R1234r
             MYSQL_DATABASE: phonebook
             MYSQL_USER: admin
-            MYSQL_PASSWORD: Oliver_1
+            MYSQL_PASSWORD: Yusuf_1
 
     myapp:
         build: .
