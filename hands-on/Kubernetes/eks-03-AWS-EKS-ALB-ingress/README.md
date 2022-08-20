@@ -45,7 +45,7 @@ sudo yum update -y
 - Install git.
 
 ```bash
-sudo yum install git
+sudo yum install git -y
 ```
 
 - Install helm.
@@ -120,12 +120,12 @@ aws configure
 ```bash
 
 eksctl create cluster \
- --name mycluster \
+ --name cwcluster \
  --version 1.22 \
  --region us-east-1 \
  --zones us-east-1a,us-east-1b,us-east-1c \
  --nodegroup-name my-nodes \
- --node-type t2.medium \
+ --node-type t3a.medium \
  --nodes 1 \
  --nodes-min 1 \
  --nodes-max 2 \
@@ -135,7 +135,7 @@ eksctl create cluster \
 
 or 
 
-eksctl create cluster --region us-east-1  --zones us-east-1a,us-east-1b,us-east-1c --node-type t2.medium --nodes 1 --nodes-min 1 --nodes-max 2 --name mycluster
+eksctl create cluster --region us-east-1  --zones us-east-1a,us-east-1b,us-east-1c --node-type t3a.medium --nodes 1 --nodes-min 1 --nodes-max 2 --name cwcluster
 
 ```
 
@@ -154,7 +154,7 @@ $ eksctl create cluster --help
 - Download an IAM policy for the AWS Load Balancer Controller that allows it to make calls to AWS APIs on your behalf. 
 
 ```bash
-curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.1/docs/install/iam_policy.json
+curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.3/docs/install/iam_policy.json
 ```
 
 - Create an IAM policy using the policy downloaded in the previous step. 
@@ -170,7 +170,8 @@ aws iam create-policy \
 
 ```bash
 eksctl create iamserviceaccount \
-  --cluster=my-cluster \
+  --cluster=cwcluster \
+  --region=us-east-1 \
   --namespace=kube-system \
   --name=aws-load-balancer-controller \
   --role-name "AmazonEKSLoadBalancerControllerRole" \
@@ -196,7 +197,8 @@ eksctl utils associate-iam-oidc-provider --region=us-east-1 --cluster=mycluster 
 
 ```bash
 eksctl create iamserviceaccount \
-  --cluster=my-cluster \
+  --cluster=cwcluster \
+  --region=us-east-1 \
   --namespace=kube-system \
   --name=aws-load-balancer-controller \
   --role-name "AmazonEKSLoadBalancerControllerRole" \
@@ -213,7 +215,7 @@ helm repo update
 
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   -n kube-system \
-  --set clusterName=mycluster \
+  --set clusterName=cwcluster \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller 
 ```
@@ -438,5 +440,5 @@ ingress-clarusshop   <none>   clarusshop.clarusway.us   k8s-default-ingressc-38a
 $ eksctl get cluster
 NAME            REGION
 mycluster       us-east-2
-$ eksctl delete cluster mycluster
+$ eksctl delete cluster cwcluster
 ```
