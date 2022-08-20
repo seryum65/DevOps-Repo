@@ -184,7 +184,7 @@ eksctl create iamserviceaccount \
 ```bash
 2022-05-09 07:50:11 [ℹ]  eksctl version 0.96.0
 2022-05-09 07:50:11 [ℹ]  using region us-east-2
-2022-05-09 07:50:12 [!]  no IAM OIDC provider associated with cluster, try 'eksctl utils associate-iam-oidc-provider --region=us-east-1 --cluster=mycluster'
+2022-05-09 07:50:12 [!]  no IAM OIDC provider associated with cluster, try 'eksctl utils associate-iam-oidc-provider --region=us-east-1 --cluster=cwcluster'
 ```
 
 - Solution to this error provide the command below:
@@ -439,6 +439,6 @@ ingress-clarusshop   <none>   clarusshop.clarusway.us   k8s-default-ingressc-38a
 ```bash
 $ eksctl get cluster
 NAME            REGION
-mycluster       us-east-2
+cwcluster       us-east-1
 $ eksctl delete cluster cwcluster
 ```
