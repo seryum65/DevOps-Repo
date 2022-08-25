@@ -115,7 +115,7 @@ docker search ubuntu
 
 ## Part 3 - Building Docker Images with Dockerfile
 
-- Build an image of Python Flask app with Dockerfile based on `python:alpine` image and push it to the Docker Hub.
+- Build an image of Python Flask app with Dockerfile based on `python:ubuntu` image and push it to the Docker Hub.
 
 - Create a folder to hold all files necessary for creating Docker image.
 
