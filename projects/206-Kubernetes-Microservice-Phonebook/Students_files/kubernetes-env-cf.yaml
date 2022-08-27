@@ -98,7 +98,7 @@ Resources:
   KubeMaster1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0dba2cb6798deb6d8
+      ImageId: ami-08d4ac5b634553e16
       InstanceType: t3a.medium
       KeyName: !Ref KeyPairName
       IamInstanceProfile: !Ref EC2ConnectProfile
@@ -155,7 +155,7 @@ Resources:
     DependsOn:
       - KubeMaster1
     Properties:
-      ImageId: ami-0dba2cb6798deb6d8
+      ImageId: ami-08d4ac5b634553e16
       InstanceType: t3a.medium
       KeyName: !Ref KeyPairName
       IamInstanceProfile: !Ref EC2ConnectProfile
