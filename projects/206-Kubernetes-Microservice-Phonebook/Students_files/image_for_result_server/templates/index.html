@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clarusway Project - 004</title>
+  <title>Seryum65 Project - 004</title>
   <style>
     body {
       max-width: 600px;
@@ -36,7 +36,7 @@
 
     button {
       box-sizing: border-box;
-      background-color: #4caf50;
+      background-color: #202720;
       color: white;
       padding: 16px 20px;
       margin: 8px 0;
@@ -51,10 +51,11 @@
     }
 
     .sectionnote{
-      color: rgba(190, 31, 164, 0.89);
+      color: rgb(240, 70, 40);
     }
+  
     .footnote{
-      color: rgba(0, 0, 255, 0.712);
+      color: rgb(5, 146, 202);
     }
 
   </style>
@@ -62,20 +63,20 @@
 
 <body>
 
-  <div><img src="https://clarusway.com/wp-content/uploads/2020/06/clarusway_logo.png" /></div>
+  <div><img src="https://uploads-ssl.webflow.com/627e7a2037060462a1f15c2b/628261632aeb4c4bdc928368_DevOps%20Flow.svg" width="500" height="115" /></div>
 
-  <h1>Project : Phonebook Application</h1>
+  <h1 style="text-align:center">Microservice Architecture | Python Flask MySQL | Kubernetes </h1>
   <h2>Welcome to {{developer_name}}'s Phonebook Application</h2>
   <h2 class="sectionnote">Enter a name to search</h2>
 
   <form action="#" method="post">
-    <label for="name"><b>Name:</b></label>
-    <input placeholder="Keyword" type="text" name="username" id="name">
+   <!-- <label for="name"><b>Name:</b></label> -->
+    <input placeholder="Name" type="text" name="username" id="name">
     <button type="submit">Search</button>
     {% if show_result %}
         <h1>Result for '{{ keyword }}' </h1>
             <ul> 
-            {% for person in persons %}
+            {% for person in persons_html %}
             <li>Name: <b>{{ person['name'] }} </b>  ---- Phone Number: <b>{{ person['number'] }}</b></li>
             {% endfor %}
             </ul>

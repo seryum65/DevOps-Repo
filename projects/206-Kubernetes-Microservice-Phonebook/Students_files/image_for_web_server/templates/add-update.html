@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clarusway Project - 004</title>
+  <title>Seryum65 Project </title>
   <style>
     body {
       max-width: 600px;
@@ -36,7 +36,7 @@
 
     button {
       box-sizing: border-box;
-      background-color: #4caf50;
+      background-color: #202720;
       color: white;
       padding: 16px 20px;
       margin: 8px 0;
@@ -51,10 +51,10 @@
     }
 
     .sectionnote{
-      color: rgba(190, 31, 164, 0.89);
+      color: rgb(240, 70, 40);
     }
     .footnote{
-      color: rgba(0, 0, 255, 0.712);
+      color: rgb(5, 146, 202);
     }
 
   </style>
@@ -62,23 +62,22 @@
 
 <body>
 
-  <div><img src="https://clarusway.com/wp-content/uploads/2020/06/clarusway_logo.png" /></div>
+  <div><img src="https://uploads-ssl.webflow.com/627e7a2037060462a1f15c2b/628261632aeb4c4bdc928368_DevOps%20Flow.svg" width="500" height="115" /></div>
 
-  <h1>Project : Phonebook Application</h1>
+  <h1 style="text-align:center">Microservice Architecture | Python Flask MySQL | Kubernetes </h1>
   <h2>Welcome to {{developer_name}}'s Phonebook Application</h2>
   <h2 class="sectionnote">Enter a name and phone number to {{action_name}}</h2>
 
   <form action="#" method="post">
-    <label for="name"><b>Name:</b></label>
+
     <input placeholder="Full Name" type="text" name="username" id="name" required>
-    <label for="number"><b>Phone Number:</b></label>
-    <input placeholder="1234567890" name="phonenumber" id="number" required />
+    <input placeholder="Phone Number" name="phonenumber" id="number" required />
     <button type="submit">{{ action_name.title() }}</button>
     {% if not_valid %}
     <p class="warning"><b>{{ message }}</b></p>
     {% endif %}
     {% if show_result %}
-      <h2 class="sectionnote"> {{ result }} </h1>
+      <h2 class="sectionnote"> {{ result_html }} </h1>
     {% endif %}
   </form>
 
