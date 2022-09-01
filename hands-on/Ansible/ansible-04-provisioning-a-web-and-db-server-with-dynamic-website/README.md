@@ -301,6 +301,18 @@ $ ansible-playbook playbook.yml
         priv: '*.*:ALL,GRANT'
         state: present
         host: "{{ hostvars['web_server'].ansible_host }}"
+
+        # magic variables examples
+        # - hosts: db_server
+          # tasks:
+          #   - debug: var=hostvars
+          #   - debug: var=hostvars['web_server'].ansible_host
+          #   - debug: var=hostvars['db_server'].ansible_host
+          #   - debug: var=ansible_os_family
+          #   - debug: var=ansible_selinux.config_mode
+          #   - debug: var=groups['servers']
+          #   - debug: var=group_names
+          #   - debug: var=inventory_hostname
 ```
 
 - Run the command below to check if everything is ok.
