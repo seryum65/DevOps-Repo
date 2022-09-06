@@ -1,4 +1,4 @@
-# Hands-on Kubernetes-04 : Deploying Microservices and Service Level Autoscaling
+# Hands-on Kubernetes-06 : Deploying Microservices and Service Level Autoscaling
 
 Purpose of the this hands-on training is to give students the knowledge of  Autoscaling and Microservices
 
@@ -121,7 +121,7 @@ spec:
         app: todoapp
     spec:
       containers:
-      - image: mongo
+      - image: mongo:5.0
         name: mongo
         ports:
         - containerPort: 27017
