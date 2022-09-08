@@ -246,6 +246,10 @@ mvn clean site
 sudo yum install -y httpd
 sudo systemctl start httpd
 sudo systemctl enable httpd
+
+or we can use python
+
+python -m SimpleHTTPServer
 ```
 
 - Run the command below to copy the contents of the site folder under ```/var/www/html``` folder.
@@ -254,7 +258,11 @@ sudo systemctl enable httpd
 sudo cp -a site/. /var/www/html
 ```
 
+```bash
+we can see effective pom use this commend
 
+mvn help:effective-pom > effective.xml
+```
 
 
 
