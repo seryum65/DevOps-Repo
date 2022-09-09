@@ -14,15 +14,10 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: '200'
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
-    # To use certificate add annotations below.
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:040154159363:certificate/43c07b0c-8f2b-4144-9655-30341b08a09d
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect: '443'
 
 spec:
   rules:
-    - host: www.seryumawsdevops.link
-      http:
+    - http:
         paths:
           - path: /account
             pathType: Prefix
