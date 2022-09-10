@@ -118,7 +118,7 @@ resource "null_resource" "config" {
     host = aws_instance.control_node.public_ip
     type = "ssh"
     user = "ec2-user"
-    private_key = file("~/.ssh/${var.mykeypem}")
+    private_key = file("/home/seryum65/Desktop/AWS-Devops/DevOps/${var.mykey}.pem")
     # Do not forget to define your key file path correctly!
   }
 
@@ -134,7 +134,7 @@ resource "null_resource" "config" {
 
   provisioner "file" {
     # Do not forget to define your key file path correctly!
-    source = "~/.ssh/${var.mykey}.pem"
+    source = "/home/seryum65/Desktop/AWS-Devops/DevOps/${var.mykey}.pem"
     destination = "/home/ec2-user/${var.mykey}.pem"
   }
 
