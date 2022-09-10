@@ -13,12 +13,11 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  profile = "cw-training"
 //  access_key = ""
 //  secret_key = ""
 
 }
 
 provider "github" {
-  token = "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
+  token = "xxxxxxxxxxxxxxxxxx"
 }
