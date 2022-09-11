@@ -101,5 +101,5 @@ output "ec2-public-ip" {
 }
 
 output "ssh-connection" {
-  value = "ssh -i ~/.ssh/davidskey.pem ec2-user@${aws_instance.ecr-instance.public_ip}"
+  value = "ssh -i ~/.ssh/firstkey.pem ec2-user@${aws_instance.ecr-instance.public_ip}"
 }
