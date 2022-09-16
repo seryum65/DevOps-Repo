@@ -37,7 +37,7 @@ resource "null_resource" "forpasswd" {
 
   # Do not forget to define your key file path correctly!
   provisioner "local-exec" {
-    command = "ssh -i ~/.ssh/${var.mykey}.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@${aws_instance.tf-jenkins-server.public_ip} 'sudo cat /var/lib/jenkins/secrets/initialAdminPassword' > initialpasswd.txt"
+    command = "ssh -i /home/seryum65/Desktop/AWS-Devops/DevOps/${var.mykey}.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@${aws_instance.tf-jenkins-server.public_ip} 'sudo cat /var/lib/jenkins/secrets/initialAdminPassword' > initialpasswd.txt"
   }
 }
 
