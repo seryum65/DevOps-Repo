@@ -59,9 +59,9 @@ This project aims to create full CI/CD Pipeline for microservice based applicati
 | Production Deployment Setup | Set Domain Name and TLS for Production | MSP-29  | Set Domain Name and TLS for Production Pipeline with Route 53 | feature/msp-29|
 | Production Deployment Setup | Set Monitoring Tools | MSP-30  | Set Monitoring tools, Prometheus and Grafana | |
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 1 - Prepare Development Server Manually on EC2 Instance
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 * Prepare development server manually on Amazon Linux 2 (t3a.medium) for developers, enabled with `Docker`,  `Docker-Compose`,  `Java 11`,  `Git`.
 
@@ -81,9 +81,9 @@ yum install git -y
 yum install java-11-amazon-corretto -y
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 2 - Prepare GitHub Repository for the Project
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Connect to your Development Server via `ssh` and clone the petclinic app from the repository [Spring Petclinic Microservices App](https://github.com/clarusway/petclinic-microservices-with-db.git).
 
@@ -130,9 +130,9 @@ git push origin main
     git push --set-upstream origin release
     ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 3 - Check the Maven Build Setup on Dev Branch
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Switch to `dev` branch.
 
@@ -162,9 +162,9 @@ git checkout dev
 ./mvnw clean install
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 4 - Prepare a Script for Packaging the Application
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Create `feature/msp-4` branch from `dev`.
 
@@ -191,9 +191,9 @@ git merge feature/msp-4
 git push origin dev
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 5 - Prepare Development Server Terraform Files
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Create `feature/msp-5` branch from `dev`.
 
@@ -241,9 +241,9 @@ git merge feature/msp-5
 git push origin dev
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 6 - Prepare Dockerfiles for Microservices
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Create `feature/msp-6` branch from `dev`.
 
@@ -384,9 +384,9 @@ git merge feature/msp-6
 git push origin dev
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 7 - Prepare Script for Building Docker Images
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Create `feature/msp-7` branch from `dev`.
 
@@ -435,9 +435,9 @@ git merge feature/msp-7
 git push origin dev
 ```
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 ## MSP 8 - Create Docker Compose File for Local Development
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 * Create `feature/msp-8` branch from `dev`.
 
