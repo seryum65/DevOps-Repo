@@ -128,7 +128,7 @@ docker push <account id>.dkr.ecr.us-east-1.amazonaws.com/clarusshop:latest
 ```bash
 Use case : Elastic Container Service >>> Elastic Container Service task
 Policy.  : AmazonECSTaskExecutionRolePolicy
-Name     : PolicyforECS
+Name     : ecsTaskExecutionRole
 ```
 
 - From the Amazon ECS left navigation menu, select Task Definitions.
